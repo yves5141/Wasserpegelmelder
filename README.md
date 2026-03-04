@@ -4,8 +4,8 @@
 
 Der **Wasserpegelmelder** ist ein eigenständiges Überwachungssystem zur Frühwarnung vor Hochwasser. Das Gerät kann an Brücken montiert werden und misst kontinuierlich den Wasserstand des Flusses. Bei Überschreiten kritischer Schwellwerte wird automatisch eine Warnung versendet.
 
-![Gerät von vorne](images/pcb_front.jpg)
-![Gerät von hinten](images/pcb_back.jpg)
+![Gerät von vorne](images/pcb_front.JPG)
+![Gerät von hinten](images/pcb_back.JPG)
 
 ## Funktionsweise
 
@@ -68,5 +68,5 @@ Die Installation erfolgt einfach am Geländer mit einer Neigung von ca. 45° zum
 
 ## 3D Render eines vollbestückten Melders
 
-![Gerät von vorne](images/3D_render_front.jpg)
-![Gerät von hinten](images/3D_render_back.jpg)
+![3D von vorne](images/3D_render_front.jpg)
+![3D von hinten](images/3D_render_back.jpg)
