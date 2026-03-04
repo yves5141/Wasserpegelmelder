@@ -11,10 +11,10 @@ Der **Wasserpegelmelder** ist ein eigenständiges Überwachungssystem zur Frühw
 
 Der Ultraschallsensor JSN-SR04 misst den Abstand vom Sensor zur Wasseroberfläche. Auf Basis dieses Abstands und der Neigung wird der aktuelle Wasserstand berechnet. Das System überwacht dabei:
 
-- **Kritischer Wasserstand**: >=95 cm (Hälfte der Flussbett-Tiefe von 190 cm)
-- **Kritischer Anstieg**: entspricht >=95 cm/h
+- **Wasserstand**: kritisch falls >=95 cm (Hälfte der Flussbett-Tiefe von 190 cm)
+- **Anstieg**: kritisch falls >=95 cm/h
 
-Bei Überschreiten dieser Werte wird eine Warnmeldung per Telegram versendet.
+Bei Erreichen/Überschreiten dieser Werte wird eine Warnmeldung per Telegram versendet.
 
 ## Hardware
 
