@@ -1,0 +1,20 @@
+Spezifikation Wasserstandsmelder mit Telegram Bot Version 1.0:
+
+- Intervallmessung des Wasserpegels 3x pro Minute
+- eigenständige Ausgabe von Warnmeldungen nur, wenn der Wasseranstieg xx,xx m/h überschreitet oder wenn ein kritischer Pegel von x,xxm überschritten wurde
+- Abfrage und Verarbeitung von eingehenden Steuerbefehlen 1x pro Minute
+- Implementierung eines Sleep Modus zum Energiesparen
+- eigenständige Ausgabe einer Funktionsrückmeldung einmal pro Tag um 19 Uhr
+- OTA updates
+- Credentials obfuskieren
+- nur Befehle von bekannten UIDs entgegennehmen und antworten
+- Credentials können nur per Firmware update eingespielt werden
+- UIDs können nur per Firmware update eingespielt werden
+
+Liste mit Steuerbefehlen und zu erwartender Ausgabe:
+
+Befehl          | Parameter             |        Ausgabe
+----------------------------------------------------------
+                |                       |
+/meldung        |       -               |  Gibt eine Rückmeldung aus, dass das Gerät korrekt funktioniert, mit aktuellem Pegelstand und Wasseranstieg.
+/update         |       -               |  Hält das Gerät Betriebsbereit für ein Firmwareupdate. Achtung! Vorher /meldung ausführen um die Akkuladung zu prüfen!

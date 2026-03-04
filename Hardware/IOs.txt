@@ -1,0 +1,25 @@
+IO4 ADC2_CH0
+IO5
+
+IO18 (SCK)      
+IO19 (MISO)
+IO23 (MOSI)
+IO26 ADC2_CH9
+
+IO25 ADC2_CH1
+
+
+auswählbare Spannung (5v 3v3) für ALLE Anschlüsse
+
+1x 3pol JST für IO4 mit Spannungsteiler + Kondensator und Z-Diode
+1x 3pol JST für IO26 mit Spannungsteiler + Kondensator und Z-Diode
+
+1x 6pol JST für SPI (IO18,19,23,5(SS))
+1x 6pol JST für SPI (IO18,19,23,4(SS))
+1x 6pol JST für SPI (IO18,19,23,26(SS))
+
+1x 4 pol. JSt für IO19,23
+1x 4pol. JST für IO4,26
+1x 4pol. JST für IO18,5
+
+4x 4pol. I2C

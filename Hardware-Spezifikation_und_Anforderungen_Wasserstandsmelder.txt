@@ -1,0 +1,73 @@
+Spezifikation Hochwassermelder:
+
+CN3791 MPPT
+9V Solarzelle, 1,17W
+18650 Akkuhalterung
+ESP32-WROOM-32U
+LoRa Ra-02 Modul        (keine abschaltung per FET nötig, da digitaler sleep modus)
+HC-SR04 Sensor
+TPS61041 boostregler für 5V (muss bei nichtnutzung abgeschalten werden zum strom sparen)
+TPS63901 Buck-boost regler für 3,3V 400mA
+
+
+Anmerkungen zum MPPT:
+
+Vmppt = 1,205 * (1+R3 / R4)    -> siehe CN3791 Datenblatt Seite 6
+Vmppt von 9V Panel muss ermittelt werden (Vmppt = 0,76 * Voc (open circuit))
+
+D1 sollte SS2040FL sein, da niedriger Leckstrom. ggf. 2-3 Stk. Parallel vorsehen
+
+/CHRG und /DONE müssen jeweils mit einem IO verbunden werden
+
+C1 - laut Datenblatt müssen verschiedene Frequenzen unterdrückt werden, 100nF, 1µF, 100µF Parallel sollten reichen
+
+
+Anmerkungen zum ESP32-WROOM-32U:
+
+ IOs zur Verfügung
+
+Messung benötigt 2 IOs
+LoRa benötigt 4 IOs
+
+
+Maße Flussbett:
+
+Abstand Brücke <-> Wasser(minimal Stand) ca. 1,9m
+Neigungswinkel Sensor zum Lot des Geländers ca. 45,4°
+Abstand Sensor <-> Oberkante Brücke ca. ~0,8m
+
+
+          Sensor
+         /
+        / |
+       /  |
+      /   |
+     /    ------------- Brücke
+    / 45,4°
+   /
+~~~~~~~~~~~~~~~~~~~~~~~ Wasser
+
+Werte für Anstieg (geschätzt, prüfen ob Referenzwerte vom DWD existieren):
+
+kritischer Anstieg  = Tiefe_Flussbett / Vorwarnzeit
+                    = 190cm / 120min
+                    = 1,58333cm/min
+
+kritischer Pegel    = Tiefe_Flussbett / 2
+                    = 190cm / 2
+                    = 95cm
+
+aktuelle Implementierung:
+
+IOs:
+
+IO27 - Ein-/Ausschaltung der Versorgungsspannung Analogmessung und 5V Spannungsregler
+IO32 - Ein-/Ausschaltung der 3,3V Versorgungsspannung (externe Geräte)
+IO33 - Analogeingang Akkuspannung (Spannungsteiler 51kOhm und 16kOhm)
+IO34 - _DONE
+IO35 - _CHRG
+IO16 - Rx2 (Ultraschallsensor)
+IO17 - Tx2 (Ultraschallsensor)
+IO18 - Debug LED 1
+IO19 - Debug LED 2
+IO23 - Debug LED 3
