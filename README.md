@@ -48,7 +48,7 @@ Das Gerät verfügt über einen integrierten Telegram-Bot mit folgenden Befehlen
 | Befehl | Parameter | Ausgabe |
 |--------|-----------|---------|
 | `/meldung` | - | Statusbericht mit aktuellem Wasserstand und Anstiegsgeschwindigkeit |
-| `/update` | - | Vorbereitung auf Firmware-Update |
+| `/update` | angehangene FW-Datei | Firmware-Update |
 
 Nur Nachrichten von autorisierten User-IDs werden entgegengenommen und beantwortet.
 
