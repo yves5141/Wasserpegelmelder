@@ -65,6 +65,16 @@ Das System ist für den Einsatz an einer Brücke gedacht:
 
 Die Installation erfolgt einfach am Geländer mit einer Neigung von ca. 45° zum Lot. Dieser Winkel ergibt sich aus dem Streuwinkel des Sensors zzgl. Toleranz.
 
+## Status und Ausblick
+
+Die Hardwaretests sind abgeschlossen.
+Die Softwareimplementierung befindet sich noch in Arbeit.
+
+## Technische Hintergründe
+
+Das Projekt basiert auf einem ESP32-WROOM-32U Modul. Als primäre Kommunikationsschnittstelle dient das integrierte WLAN des ESP32.
+Falls lokal kein Hotspot verfügbar ist, kann alternativ auch ein LoRa Funkmodul genutzt werden.
+Im Ordner "Hardware" findet sich das KiCAD Projekt für die Hardware.
 
 ## 3D Render eines vollbestückten Melders
 
